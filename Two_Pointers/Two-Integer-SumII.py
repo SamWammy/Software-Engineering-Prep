@@ -19,3 +19,26 @@ class Solution:
 # then loop through the indexes and values of the numbers list 
 # if the target-value exists in the hashmap and the index is not the same, then we return the indexes from the hashmap 
 #simple 
+
+
+
+        ########################################### MORE OPTIMAL APPROACH BELOW O(1) Space
+        #two pointer approach 
+
+        class Solution:
+    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+        # since this is sorted we can take a two pointer approach 
+        # this makes this O(1) space which is optimal 
+
+        left= 0 
+        right= len(numbers) - 1 
+
+        while left < right : 
+            amount= numbers[left] + numbers[right]
+
+            if amount < target: 
+                left +=1
+            elif amount > target:
+                right -=1
+            else: 
+                return [left+1, right +1]
