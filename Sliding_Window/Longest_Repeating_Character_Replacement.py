@@ -3,7 +3,6 @@ class Solution:
         tracker ={}
         res =0 
         left =0 
-
         for r in range(len(s)): 
             tracker[s[r]]= tracker.get(s[r],0)+1
 
