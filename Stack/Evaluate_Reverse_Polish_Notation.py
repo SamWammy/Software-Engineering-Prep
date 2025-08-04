@@ -21,7 +21,7 @@ class Solution:
             elif char== '/': 
                 a= stack.pop()
                 b=stack.pop()
-                stack.append(int(float(b/a)))
+                stack.append(int(b/a))
 
             else: 
                 stack.append(int(char))
