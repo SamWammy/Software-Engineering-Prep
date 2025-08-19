@@ -10,5 +10,7 @@ class Solution:
         for p,s in pos_speed: 
             arrival= (target-p)/s
             if not stack or stack[-1] < arrival: 
+                #meaning that that arrival is after when the car arrives on the top of the stack 
+                #so this is a different fleet
                 stack.append(arrival)
         return len(stack)
