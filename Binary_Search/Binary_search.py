@@ -13,18 +13,17 @@ class Solution:
 
 # bisect returns the index of the target, or where it could be inserted in a sorted list 
 #####################################################################################################
-
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
-        l, r = 0, len(nums) - 1
+        left, right =0, len(nums)-1 
 
-        while l<= r: 
-            m= l + ((r -l) //2)
+        while left<= right: 
+            middle = left + ((right-left)//2)
 
-            if nums[m] > target:
-                r = m -1
-            elif nums[m] < target: 
-                l = m +1
+            if nums[middle] >target: 
+                right = middle-1
+            elif nums[middle] < target: 
+                left= middle+1
             else: 
-                return m 
+                return middle 
         return -1 
